@@ -1,0 +1,1 @@
+var React,Switch,div,input,label,_ref;React=require("react/addons"),_ref=React.DOM,label=_ref.label,input=_ref.input,div=_ref.div,Switch=React.createClass({render:function(){return label({className:"topcoat-switch"},this.transferPropsTo(input({type:"checkbox",className:"topcoat-switch__input"})),div({className:"topcoat-switch__toggle"}))}}),module.exports=Switch;

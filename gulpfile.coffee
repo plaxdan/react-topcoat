@@ -21,6 +21,7 @@ server = do lr
 projectPath   = "#{path.resolve __dirname}"
 appPath       = "#{projectPath}/app"
 buildPath     = "#{projectPath}/build"
+distPath     = "#{projectPath}/dist"
 
 jsBuildPath      = "#{buildPath}/js"
 webBuildPath     = "#{buildPath}/web"
@@ -113,5 +114,10 @@ gulp.task 'test:console', ['build:src'], ->
     .on 'error', gutil.log
     .pipe mocha reporter: 'nyan'
     .on 'error', gutil.log
+
+gulp.task 'dist', ['build'], ->
+  gulp.src ["#{jsBuildPath}/**/*", "!#{jsBuildPath}/test.js"]
+    .pipe uglify()
+    .pipe gulp.dest distPath
 
 gulp.task 'default', ['build']

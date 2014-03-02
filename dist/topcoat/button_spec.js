@@ -1,0 +1,1 @@
+var button;button=require("./button"),describe("Button",function(){return it("TODO: change this to test the react component",function(){return 3..should.equal(3)}),it("should have a props property",function(){var t;return t=button(),t.should.have.ownProperty("props")})});

@@ -1,0 +1,1 @@
+var Input,React,input;React=require("react/addons"),input=React.DOM.input,Input=React.createClass({propTypes:{large:React.PropTypes.bool},render:function(){return this.transferPropsTo(input({type:"text",className:""+this._className()}))},_className:function(){var t;return t="topcoat-text-input",this.props.large&&(t=t.concat("--large")),t}}),module.exports=Input;

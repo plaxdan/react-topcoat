@@ -1,0 +1,1 @@
+var Range,React,input;React=require("react/addons"),input=React.DOM.input,Range=React.createClass({render:function(){return this.transferPropsTo(input({type:"range",className:"topcoat-range"}))}}),module.exports=Range;

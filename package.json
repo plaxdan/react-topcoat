@@ -3,7 +3,7 @@
   "description": "React components for the Topcoat UI framework",
   "version": "0.0.1",
   "author": "Daniel Walker <plaxdan@gmail.com>",
-  "main": "build/js/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",

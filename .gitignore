@@ -10,6 +10,5 @@
 .wafpickle-*
 build/
 CVS
-dist/
 node_modules
 npm-debug.log

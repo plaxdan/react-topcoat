@@ -1,0 +1,1 @@
+var React,TabBar,div;React=require("react/addons"),div=React.DOM.div,TabBar=React.createClass({render:function(){return div({className:"topcoat-tab-bar"},this.props.children)}}),module.exports=TabBar;
