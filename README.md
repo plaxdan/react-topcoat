@@ -1,6 +1,6 @@
 React Topcoat
 ===
-[Topcoat](topcoat.io) components built with the [React](facebook.github.io/react/) library.
+[Topcoat](http://topcoat.io) components built with the [React](http://facebook.github.io/react/) library.
 
 #### Build tasks
 
