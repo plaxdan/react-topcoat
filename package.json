@@ -1,0 +1,50 @@
+{
+  "name": "react-topcoat",
+  "description": "React components for the Topcoat UI framework",
+  "version": "0.0.1",
+  "author": "Daniel Walker <plaxdan@gmail.com>",
+  "main": "build/js/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plaxdan/react-topcoat"
+  },
+  "bugs": {
+    "url": "https://github.com/plaxdan/react-topcoat/issues"
+  },
+  "keywords": [
+    "react",
+    "topcoat"
+  ],
+  "dependencies": {
+    "react": "~0.9.0",
+    "topcoat": "^0.7.5"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.0",
+    "gulp-util": "~2.2.10",
+    "gulp-concat": "~2.1.7",
+    "gulp-uglify": "~0.1.0",
+    "gulp-minify-css": "~0.2.0",
+    "gulp-rename": "~0.2.2",
+    "connect": "~2.12.0",
+    "open": "~0.0.4",
+    "tiny-lr": "0.0.5",
+    "gulp-open": "~0.2.8",
+    "gulp-browserify": "~0.3.4",
+    "gulp-embedlr": "~0.5.2",
+    "gulp-clean": "~0.2.4",
+    "chai": "~1.8.1",
+    "sinon": "~1.7.3",
+    "sinon-chai": "~2.4.0",
+    "gulp-mocha": "~0.4.1",
+    "mocha": "~1.17.1",
+    "event-stream": "~3.1.0",
+    "coffee-script": "~1.7.1",
+    "gulp-coffee": "~1.4.1",
+    "gulp-livereload": "^1.2.0"
+  },
+  "scripts": {
+    "test": "gulp test"
+  }
+}

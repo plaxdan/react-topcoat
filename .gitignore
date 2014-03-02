@@ -1,0 +1,15 @@
+*.sublime-workspace
+.*.swp
+._*
+.DS_Store
+.git
+.hg
+.lock-wscript
+.svn
+.tmp/
+.wafpickle-*
+build/
+CVS
+dist/
+node_modules
+npm-debug.log
