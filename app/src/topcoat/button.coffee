@@ -5,9 +5,7 @@ React = require 'react/addons'
 Button = React.createClass
 
   propTypes:
-    # TODO: cannot be both cta AND quiet
-    cta: React.PropTypes.bool
-    quiet: React.PropTypes.bool
+    variant: React.PropTypes.oneOf ['cta', 'quiet']
     large: React.PropTypes.bool
 
   render: ->
@@ -19,8 +17,7 @@ Button = React.createClass
   _className: ->
     className = 'topcoat-button'
     className = className.concat '--large' if @props.large
-    className = className.concat '--cta' if @props.cta
-    className = className.concat '--quiet' if @props.quiet
+    className = className.concat "--#{@props.variant}" if @props.variant?
     className
 
 module.exports = Button

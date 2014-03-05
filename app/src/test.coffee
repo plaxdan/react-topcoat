@@ -8,12 +8,24 @@ chai.use sinonChai
 chai.should()
 
 
-ReactTopcoat = require './index'
+React = require 'react/addons'
 
-it 'should run a basic test', ->
-  (1 + 2).should.equal 3
+describe 'Test environment', ->
+
+  before ->
+    @testUtils = React.addons.TestUtils
+
+  it 'should run a basic test', ->
+    (1 + 2).should.equal 3
+
+  it 'should have access to React', ->
+    React.should.not.be.null
+
+  it 'should have access to React.addons.TestUtils', ->
+    @testUtils.should.not.be.null
 
 describe 'ReactTopcoat module', ->
+  ReactTopcoat = require './index'
 
   it 'should export as ReactTopcoat', ->
     ReactTopcoat.should.not.be.null

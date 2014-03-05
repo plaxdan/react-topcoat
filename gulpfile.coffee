@@ -10,11 +10,9 @@ clean = require 'gulp-clean'
 mocha = require 'gulp-mocha'
 coffee = require 'gulp-coffee'
 concat = require 'gulp-concat'
-rename = require 'gulp-rename'
 uglify = require 'gulp-uglify'
 embedlr = require 'gulp-embedlr'
 refresh = require 'gulp-livereload'
-minifycss = require 'gulp-minify-css'
 browserify = require 'gulp-browserify'
 server = do lr
 
@@ -24,16 +22,12 @@ buildPath     = "#{projectPath}/build"
 distPath     = "#{projectPath}/dist"
 
 jsBuildPath      = "#{buildPath}/js"
-webBuildPath     = "#{buildPath}/web"
 testBuildPath    = "#{buildPath}/test"
 
 nodeModulesPath     = "#{projectPath}/node_modules"
 
 port = 3000
-# allow to connect from anywhere
 hostname = null
-# change this to something unique if you want to run multiple projects
-# side-by-side
 lrPort = gutil.env.lrport or 35729
 
 browserifyOptions =
@@ -57,22 +51,17 @@ gulp.task 'build:tests', ['build:src'], ->
   gulp.src "#{jsBuildPath}/test.js", read: false
     .pipe browserify browserifyOptions
     .on 'error', gutil.log
-    .pipe rename 'test.js'
     .pipe gulp.dest "#{testBuildPath}/src"
     .pipe refresh server
 
-# Compiles Sass files into css file
-# and reloads the styles
 gulp.task 'styles', ->
   gulp.src "node_modules/mocha/mocha.css"
     .pipe gulp.dest "#{testBuildPath}/styles"
     .pipe refresh server
 
-# Copy the HTML to mocha
 gulp.task 'html', ->
   gulp.src "#{appPath}/index.html"
-    # embeds the live reload script
-    .pipe embedlr()
+    .pipe embedlr() # embeds the live reload script
     .pipe gulp.dest "#{testBuildPath}"
     .pipe refresh server
 
@@ -80,7 +69,6 @@ gulp.task 'livereload', ->
   server.listen lrPort, (err) ->
     gutil.log err if err
 
-# Watches files for changes
 gulp.task 'watch', ->
   gulp.watch "#{appPath}/src/**", ['build:tests']
   gulp.watch "#{appPath}/test.html", ['html']
@@ -120,4 +108,4 @@ gulp.task 'dist', ['build'], ->
     .pipe uglify()
     .pipe gulp.dest distPath
 
-gulp.task 'default', ['build']
+gulp.task 'default', ['dist']
