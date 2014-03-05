@@ -1,7 +1,8 @@
 React Topcoat
-===
+=======
+[![Build Status](https://travis-ci.org/plaxdan/react-topcoat.png?branch=master)](https://travis-ci.org/plaxdan/react-topcoat)
 
-[Topcoat](http://topcoat.io) components built with the [React](http://facebook.github.io/react/) library.
+[Topcoat](http://topcoat.io) components built with [React](http://facebook.github.io/react/).
 
 #### Build tasks
 
